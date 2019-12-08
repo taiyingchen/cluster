@@ -1,6 +1,7 @@
 # GMM
 
 Python implementation of Gaussian Mixture Model (GMM)
+Currently only support data points in **2 dimensions**
 
 ## Installation
 
@@ -38,3 +39,8 @@ y = gmm.predict(X)
 print(y)
 # [1, 0, 0, 1, 0, 0, 1, 0, 1, 1]
 ```
+
+## Todo
+
+* Support data points in multi-dimensions
+* Import `numpy` library for matrix calculation
