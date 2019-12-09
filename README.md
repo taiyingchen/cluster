@@ -1,7 +1,7 @@
 # Cluster
 
 Python implementation of Gaussian Mixture Model (GMM) and K-Means clustering  
-GMM Currently only support data points in **2 dimensions**
+GMM currently only support data points in **2 dimensions**
 
 ## Installation
 
