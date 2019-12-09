@@ -2,7 +2,7 @@ import numpy as np
 
 
 class KMeans():
-    def __init__(self, max_iter=20):
+    def __init__(self, max_iter=50):
         self.max_iter = max_iter
 
     def nearest_cluster(self, xi):
@@ -43,7 +43,7 @@ class KMeans():
 
 
 def main():
-    X = [
+    X = np.array([
         [1, 1],
         [1, 3],
         [1, 4],
@@ -55,8 +55,7 @@ def main():
         [5, 4],
         [4, 3],
         [4, 5]
-    ]
-    X = np.array(X)
+    ])
 
     kmeans = KMeans()
     kmeans.fit(X, centroids=[0, 5])
