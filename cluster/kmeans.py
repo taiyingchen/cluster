@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 class KMeans():
@@ -62,19 +61,7 @@ def main():
     kmeans = KMeans()
     kmeans.fit(X, centroids=[0, 5])
     y = kmeans.predict(X)
-
-    X_plot = {}
-    for i, cluster in enumerate(y):
-        if cluster not in X_plot:
-            X_plot[cluster] = []
-        X_plot[cluster].append(X[i])
-
-    for cluster in X_plot:
-        X_plot[cluster] = np.array(X_plot[cluster])
-
-    plt.scatter(X_plot[0][:, 0], X_plot[0][:, 1], c='b')
-    plt.scatter(X_plot[1][:, 0], X_plot[1][:, 1], c='r')
-    plt.show()
+    print(y)
 
 
 if __name__ == '__main__':
