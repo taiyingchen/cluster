@@ -24,13 +24,11 @@ class KMeans():
         self.data_clusters = [0 for i in range(self.num_data)]
 
         for _ in range(self.max_iter):
-            print(f'Iteration {_} --------')
-            print(self.data_clusters)
-            print(self.clusters)
-
+            # Expectation step
             for i in range(self.num_data):
                 self.data_clusters[i] = self.nearest_cluster(X[i])
 
+            # Maximization step
             for j in range(self.num_clusters):
                 self.clusters[j] = np.mean(
                     [X[i] for i, cluster in enumerate(self.data_clusters) if cluster == j], axis=0)
